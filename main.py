@@ -1,4 +1,3 @@
-import pygame
 from constants import *
 from player import *
 
@@ -23,11 +22,14 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        screen.fill(000)
-        player.draw(screen)
-        pygame.display.flip()
+        screen.fill((0,0,0))
         clock.tick(60)
-        dt = clock.tick()/1000
+        dt = clock.tick(60)/1000
+        player.update(dt)
+        player.draw(screen)
+        
+        
+        pygame.display.flip()
 
 
 
