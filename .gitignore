@@ -1,2 +1,6 @@
-venv/
+
+#files to ignore
+
+.venv/
 __pycache__/
+venv/
